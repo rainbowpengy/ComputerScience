@@ -14,9 +14,14 @@ public class Algorithms {
         return a;
     }
 
+    public static int addSquares(int a, int b){
+        return ((a*a) + (b*b));
+    }
+
     public static int gcf(int a, int b) {
         return gcf_r(a, b);
     }
+
     public static int gcf_r(int a, int b) {
         if (a == b) {
             return a;
