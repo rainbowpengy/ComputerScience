@@ -1,7 +1,7 @@
 /**
  * @author Jarod Klion on 10/1/2015.
  */
-public class Algorithms {
+public class MyMath {
     public static int gcf_l(int a, int b) {
         while (a!= b) {
             if(a > b) {
