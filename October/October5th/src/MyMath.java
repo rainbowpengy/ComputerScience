@@ -34,11 +34,31 @@ public class MyMath {
         }
     }
 
+    public static int transpose(int n) {
+        if (n < 10) {
+            return (n*10);
+        }
+
+        else if (n < 100) {
+            return (n % 10);
+
+        }
+
+        else if (n < 1000){
+            return ((n/100) % 10);
+        }
+
+        else {
+            return n;
+        }
+    }
+
     public static void main(String args[]) {
         System.out.println("gcf(16, 4) = "+ gcf(16,4));
         System.out.println("gcf(1, 2) = 1 = " + gcf(1, 2));
         System.out.println("gcf(21, 98) = 7 = " + gcf(21, 98));
         System.out.println("gcf(1729, 13) = 13 = " + gcf(1729, 13));
         System.out.println("gcf(1792, 4) = 1 = " + gcf(1729, 2));
+        System.out.println("transpose = " + transpose(35));
     }
 }
