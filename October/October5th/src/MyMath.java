@@ -39,18 +39,15 @@ public class MyMath {
             return (n*10);
         }
 
-        else if (n < 100) {
-            return (n % 10);
-
-        }
-
-        else if (n < 1000){
-            return ((n/100) % 10);
-        }
-
         else {
-            return n;
+
+            int i = n % 10;
+            int j = n % 100 / 10;
+            int k = n / 100;
+            return (100 * k) + (i * 10) + j;
+
         }
+
     }
 
     public static void main(String args[]) {
@@ -59,6 +56,10 @@ public class MyMath {
         System.out.println("gcf(21, 98) = 7 = " + gcf(21, 98));
         System.out.println("gcf(1729, 13) = 13 = " + gcf(1729, 13));
         System.out.println("gcf(1792, 4) = 1 = " + gcf(1729, 2));
-        System.out.println("transpose = " + transpose(35));
+        System.out.println("transpose = " + transpose(12));
+        System.out.println("transpose = " + transpose(123));
+        System.out.println("transpose = " + transpose(1234));
+        System.out.println("transpose = " + transpose(12345));
+
     }
 }
