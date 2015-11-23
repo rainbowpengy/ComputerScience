@@ -27,8 +27,8 @@ public class Rainbow extends JPanel
 
     // Declare and initialize local int variables xCenter, yCenter
     // that represent the center of the rainbow rings:
-    int xCenter = width / 2;
-    int yCenter = height * 3 / 4;
+    int xCenter = width * 6 / 10;
+    int yCenter = height;
     // Declare and initialize the radius of the large semicircle:
     int largeRadius = (width / 4);
 
