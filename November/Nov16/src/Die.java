@@ -7,6 +7,7 @@ public class Die {
     public Die() {
         roll();
     }
+
     public void roll() {
         numDots = (int) (1 + Math.random() * 6);
     }
