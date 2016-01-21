@@ -10,6 +10,7 @@ public class Vendor {
   private int stock;  //# of items
   private int deposit;  //Deposit
   private int change; //Change
+  private Coins coin = new Coins(change);
 
   /**
    * Constructs a Vendor
