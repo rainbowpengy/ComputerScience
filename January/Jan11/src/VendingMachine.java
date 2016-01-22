@@ -8,6 +8,7 @@ public class VendingMachine extends JPanel implements ActionListener
   private JButton deposit25c, deposit10c, deposit5c, go;
   private JTextField display;
   private Vendor vendor;
+  private Coins coin;
   boolean trayFull;
   Color brandColor;
   String brandName;
@@ -85,18 +86,19 @@ public class VendingMachine extends JPanel implements ActionListener
     {
       trayFull = vendor.makeSale();
       int change = vendor.getChange();
+      Coins coin = new Coins(change);
       if (trayFull)          // Successful sale
       {
         repaint();
         JOptionPane.showMessageDialog(null,
-          "Enjoy your " + brandName + "\n" + " Change " + change + "c",
+          "Enjoy your " + brandName + "\n" + "Your change is " + coin.toString(),
           "Enjoy " + brandName, JOptionPane.PLAIN_MESSAGE);
         trayFull = false;
       }
       else if (change > 0)   // Refund
       {
         JOptionPane.showMessageDialog(null,
-          "Take " + change + "c back",
+          "Take " + coin.toString() + " back",
           "Money back", JOptionPane.ERROR_MESSAGE);
       }
     }

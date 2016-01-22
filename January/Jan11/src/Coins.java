@@ -37,10 +37,4 @@ public class Coins {
     public String toString() {
         return cents + " cents" + " = " + getQuarters() + "q " + getDimes()+ "d " + getNickels() + "n " + getPennies() + "p";
     }
-
-    public static void main(String[] args){
-        Coins test = new Coins(82);
-        System.out.println(test.toString());
-
-    }
 }

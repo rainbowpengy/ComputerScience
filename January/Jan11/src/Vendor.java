@@ -10,7 +10,6 @@ public class Vendor {
   private int stock;  //# of items
   private int deposit;  //Deposit
   private int change; //Change
-  private Coins coin = new Coins(change);
 
   /**
    * Constructs a Vendor
@@ -93,6 +92,8 @@ public class Vendor {
   public int getChange() {
     int tempChange = change;
     change = 0;
+    Coins coin = new Coins(tempChange);
+    coin.toString();
     return tempChange;
   }
 }
