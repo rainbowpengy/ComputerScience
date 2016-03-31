@@ -31,7 +31,7 @@ public class TestComplex
     System.out.println("(" + c1 + ")" + " * " + "(" + c2 + ")" + " = " + product);
 
     Complex product2 = c1.multiply(2);
-    System.out.println("(" + c1 + ")" + " * " + "2i" + " = " + product2);
+    System.out.println("(" + c1 + ")" + " * " + "2" + " = " + product2);
 
     //show step to get abs value
     //+ c1.getReal() + "^2 " + "+" + c1.getComplex() + "^2" + " = "

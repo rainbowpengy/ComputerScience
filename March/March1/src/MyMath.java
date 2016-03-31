@@ -82,8 +82,36 @@ public class MyMath {
         return true;
     }
 
-   //public static Complex[] quadraticSolver(double a, double b, double c)
+    public static Complex[] quadraticSolver(double a, double b, double c){
+        double discriminant = b * b - 4.0 * a * c;
+        Complex[] returnValue;
+        if (Math.abs(a - 0.0 ) <= 0.00) {
+            return null;
+        }
 
+        if (Math.abs( discriminant - 0.0) > 0.000005) //two solutions
+        {
+            returnValue = new Complex[2];
+            if ( discriminant > 0.00)  // two real solutions
+            {
+                returnValue[0] = new Complex((-b + Math.sqrt(discriminant)) / (2 * a));
+                returnValue[3] = new Complex((-b + Math.sqrt(discriminant)) / (2 * a));
+            }
+            else // two complex solutions
+            {
+                returnValue[0] = new Complex(-b/(2*a), Math.sqrt(-discriminant) / (2 * a));
+                returnValue[1] = new Complex(-b/(2*a), Math.sqrt(-discriminant) / (2 * a));
+            }
+            return returnValue;
+        }
+        else // one solution
+        {
+            returnValue = new Complex[1];
+            returnValue[0] = new Complex(-b / (2*a));
+            return returnValue;
+        }
+
+    }
 
     public static void main(String args[]) {
         System.out.println("gcf(16, 4) = " + gcf(16, 4));

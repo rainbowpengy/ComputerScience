@@ -10,6 +10,7 @@ public class Vendor {
   private int stock;  //# of items
   private int deposit;  //Deposit
   private int change; //Change
+  private static double totalSales = 0;
 
   /**
    * Constructs a Vendor
@@ -95,5 +96,12 @@ public class Vendor {
     Coins coin = new Coins(tempChange);
     coin.toString();
     return tempChange;
+  }
+
+  public static double getTotalSales() {
+    double tempTotalSales = totalSales;
+    totalSales = 0;
+    return tempTotalSales;
+
   }
 }
