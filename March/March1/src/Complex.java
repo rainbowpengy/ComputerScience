@@ -60,4 +60,12 @@ public class Complex {
     public double getComplex() {
         return imag;
     }
+
+    public boolean equals(Object x) {
+        if(x instanceof Complex) {
+            Complex other = (Complex)x;
+            return (Math.abs(real - other.real) < 0.00000000 && (Math.abs(imag - other.imag)) < 0.000000000);
+        }
+        return false;
+    }
 }
