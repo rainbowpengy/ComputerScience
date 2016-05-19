@@ -1,3 +1,4 @@
+// @author Jarod Klion
 public class CharMatrix
 {
   // Fields:
